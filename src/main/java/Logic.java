@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Logic {
-    public char [][] field =
+    public static char [][] field =
             {{'+','+','+'},
              {'+','+','+'},
              {'+','+','+'}};// Field creation
@@ -33,8 +33,14 @@ public class Logic {
     } // Human stroke
 
     public static void CompRondom(){
-
-
+        int x = (int) (Math.random() * 3), y = (int) (Math.random() * 3);
+        while (field[x][y] == '0' || field[x][y] == 'X') {
+            x = (int) (Math.random() * 3);
+            y = (int) (Math.random() * 3);
+        }
+        field[x][y] = '0';
     }
+
+
 
 }
