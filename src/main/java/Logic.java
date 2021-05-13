@@ -48,7 +48,14 @@ public class Logic {
                  winner = field[i][0];
                  break;
              }
-         }
+         }if(winner == ' '){
+             for(int i = 0; i < 3; i++){
+                 if(field[0][i] == field[1][i] && field[1][i] == field[2][i] && field[0][i] != '+'){
+                     winner = field[0][i];
+                     break;
+                 }
+             }
+        }
 
 
          return winner;
