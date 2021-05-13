@@ -59,9 +59,11 @@ public class Logic {
              if(field[0][0] == field[1][1] && field[1][1] == field[2][2] && field[0][0] != '+'){
                  winner = field[0][0];
             }
+        }if(winner == ' ') {
+            if (field[0][2] == field[1][1] && field[1][1] == field[2][0] && field[0][2] != '+') {
+                winner = field[0][0];
+            }
         }
-
-
          return winner;
     }
 
