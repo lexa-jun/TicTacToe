@@ -41,6 +41,20 @@ public class Logic {
         field[x][y] = '0';
     }
 
+    public static char checkGame(){
+        char winner = ' ';
+         for(int i = 0; i < 3; i++){
+             if(field[i][0] == field[i][1] && field[i][1] == field[i][2] && field[i][0] != '+'){
+                 winner = field[i][0];
+                 break;
+             }
+         }
+
+
+         return winner;
+    }
+
+
 
 
 }
