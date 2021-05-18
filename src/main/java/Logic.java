@@ -13,6 +13,7 @@ public class Logic {
             for (int j = 0; j < 3; j++){
                 System.out.print(field[i][j]);
             }
+            System.out.println();
         }
     } //Displaying the playing field on the screen
 
@@ -41,7 +42,7 @@ public class Logic {
         field[x][y] = '0';
     }
 
-    public static char checkGame(){
+    public static char CheckGame(){
         char winner = ' ';
          for(int i = 0; i < 3; i++){
              if(field[i][0] == field[i][1] && field[i][1] == field[i][2] && field[i][0] != '+'){
